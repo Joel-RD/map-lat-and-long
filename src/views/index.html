@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Curiosos de Países 🌍</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Datos Curiosos sobre Países 🌍🤔</h1>
+        <div class="select-container">
+            <select name="paises" id="paises">
+                <option value="">-- Selecciona un país --</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Chile">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Peru">Perú</option>
+                <option value="United_States">Estados Unidos</option>
+                <option value="mexico">Mexico</option>
+            </select>
+            <button type="button" id="generated" disabled>Buscar</button>
+        </div>
+
+        <div class="head-map">
+            <section id="map"></section>
+            <section id="info">
+                <div id="container-info">
+                    <img  alt="" id="bandera">
+                    <div class="info">
+                        <h2 id="country">País</h2>
+                        <a id="wikipedia" target="_blank">
+                        wikipedia</a>
+                    </div>
+                </div>
+                <section id="info-basic">
+                    <ul>
+                        <li><strong>Capital:</strong> <span id="capital"></span></li>
+                        <li><strong>Independencia:</strong> <span id="independencia"></span></li>
+                        <li><strong>Área:</strong> <span id="area"></span></li>
+                    </ul>
+
+                    <ul>
+                      <li><strong>Gastronomía:</strong> <span id="gastronomia"></span></li>  
+                    </ul>
+                </section>
+
+                <h2>Ubicación</h2>
+                <ul>
+                    <li><strong>Latitud:</strong> <span id="latitud"></span></li>
+                    <li><strong>Longitud:</strong> <span id="longitud"></span></li>
+                </ul>
+
+                <h2><strong>Eventos importantes</strong></h2>
+                <ul id="eventos-importantes"></ul>
+
+                <h2><strong>Presidentes importantes</strong></h2>
+                <ul id="presidentes-importantes"></ul>
+
+                <h2><strong>Inventos y descubrimientos</strong></h2>
+                <ul id="inventos-descubrimientos"></ul>
+
+                <h2><strong>Contribuciones al mundo</strong></h2>
+                <ul id="contribuciones-mundo"></ul>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
